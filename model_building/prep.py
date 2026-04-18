@@ -14,7 +14,7 @@ from huggingface_hub import login, HfApi
 api = HfApi(token=os.getenv("HF_TOKEN")) # Correctly fetching token from environment variable
 DATASET_PATH = "hf://datasets/Mahendra-ML/tourism-project/tourism.csv"
 df = pd.read_csv(DATASET_PATH)
-print("Dataset loaded successfully..")
+print("Dataset loaded successfully.")
 
 # Drop the unique identifier
 df.drop(columns=['CustomerID'], inplace=True)
